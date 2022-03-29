@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Roboto+Slab:wght@300&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+
+  <title>Priscilla's Resume</title>
+  <style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .maincontainer {
+        width: 800px;
+        margin: 0 auto;
+        padding-top: 30px;
+    }
+
+    .box {
+        width: 750px;
+        height: 450px;
+        padding: 20px;
+        float: left;
+        border: 1px solid black;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+
+    .tab {
+        width: 80px;
+        padding: 6px 9px;
+        float: left;
+        border: 1px solid black;
+        border-bottom: 0px;
+        font-family: 'Roboto Slab', serif;
+        text-align: center;
+    }
+    #cilla {
+        font-weight: lighter;
+    }
+
+    h1 {
+        font-family: 'Roboto Slab', serif;
+        font-weight: bold;
+        padding-bottom: 20px;
+    }
+    
+    h2 {
+        font-family: 'Patrick Hand', cursive;
+        font-weight: bold;
+    }
+
+    h3 {
+        font-family: 'Patrick Hand', cursive;
+        font-weight: lighter;
+    }
+   </style>
+<script>
+   var dataresume =[
+       '<h2>About</h2><br><h3>A visual communication design student that passionate to learn new things, meeting new peoples, always strive out for ideas and seeing things in positive way. I am an enthusiastic, self-motivated, reliable, responsible and hard working person. I am a mature team worker and adaptable to all challenging situations. I am able to work well both in a team environment and individual. I am a good communicator with proven inter personal skills and am used to working in a team whilst also being capable of using own initiative. I am able to work well under pressure and adhere to strict deadlines.</h3>', 
+       '<h2>Education</h2><br><h3>MULIA KENCANA SCHOOL<br>2005-2007 Kindergarten<br><br>DIAN KASIH SCHOOL<br>2007-2020 Elementary to High School (Science)<br><br>PELITA HARAPAN UNIVERSITY<br>2020 - Now Visual Communication Design</h3>', 
+       '<h2>Interest</h2><br><h3>1. Community Involvement<br>By joining an organization, I can build connections with new people, beside that, joining an organization can improve my leadership skills.<br>2. Travel<br>Traveling can prove that I’m not afraid of stepping outside my comfort zone and learning new things. It develops my Curiosity, courage, and self-organization.<br>3. Design<br>Imagination and inventiveness are also parts of critical-thinking skills. Designing require creativity skills.<br>4. Listening to Music<br>Listening to music lowers stress and elevates my mood. It strengthens learning and memory abilities.<br>5. Watching movies<br>Watching a movie allows me to relax, disconnect and have a good time. When I watch a movie, I experience different emotions without suffering the real-life side effects. It helps me to relax, decrease anxiety, inspire motivation.</h3>'
+        ];
+</script>
+</head>
+<body>
+    <div class="maincontainer">
+        <h1>Hi! My name is Priscilla Gunarso</h1>
+        <div id="tab_satu" class="tab" onclick="ubahwarna('lightblue', 'tab_satu', dataresume[0])">About</div>
+        <div id="tab_dua" class="tab" onclick="ubahwarna('mistyrose','tab_dua', dataresume[1])">Education</div>
+        <div id="tab_tiga" class="tab" onclick="ubahwarna('cornsilk','tab_tiga', dataresume[2])">Interest</div>
+        <div id="cilla" class="box"></div>
+    </div>
+</body>
+</html>
+<script>
+    function ubahwarna(x,y,z) {
+        document.querySelector('#cilla').style.backgroundColor = x;
+        document.querySelector('#cilla').innerHTML = z;
+        if (y == 'tab_satu') {
+            document.querySelector('#tab_satu').style.backgroundColor = 'lightblue';
+            document.querySelector('#tab_satu').style.borderTopRightRadius = '7px';
+            document.querySelector('#tab_dua').style.backgroundColor = 'white';
+            document.querySelector('#tab_tiga').style.backgroundColor = 'white';
+        } else if (y == 'tab_dua'){
+            document.querySelector('#tab_satu').style.backgroundColor = 'white';
+            document.querySelector('#tab_dua').style.backgroundColor = 'mistyrose';
+            document.querySelector('#tab_dua').style.borderTopRightRadius = '7px';
+            document.querySelector('#tab_tiga').style.backgroundColor = 'white';
+        }
+        else {
+            document.querySelector('#tab_satu').style.backgroundColor = 'white';
+            document.querySelector('#tab_dua').style.backgroundColor = 'white';
+            document.querySelector('#tab_tiga').style.backgroundColor = 'cornsilk';
+            document.querySelector('#tab_tiga').style.borderTopRightRadius = '7px';
+        }
+    }
+</script>
